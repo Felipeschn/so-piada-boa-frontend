@@ -1,0 +1,134 @@
+.text-not-found {
+  color: #fff;
+
+  margin-left: 40%;
+  margin-top: 20%;
+}
+
+.button-beggin {
+  margin-top: 25px;
+  margin-left: 30px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  padding: 20px;
+  color: #fff;
+  border-radius: 4px;
+  justify-content: flex-end;
+  width: 20rem;
+  font-size: x-large;
+}
+
+.box-landing-page {
+  background: #fff;
+  margin: 90px auto;
+  border-radius: 15px;
+  padding: 40px;
+  color: #161a2b;
+  height: 650px;
+  width: 75%;
+}
+
+.title-landing-page {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 225%;
+  font-weight: 100;
+  word-spacing: 4px;
+  color: dimgray;
+}
+
+.text-landing-page {
+  text-align: center;
+  color: dimgray;
+  padding: 15px 20px 10px 20px;
+}
+.subtext-landing-page {
+  margin: 30px;
+  text-align: center;
+  color: darkslateblue;
+  padding: 15px 20px 10px 20px;
+  font-weight: bold;
+}
+.button-landing-page {
+  margin-left: 50px;
+  padding: 10px;
+}
+
+.box-home-page {
+  background: rgb(209, 204, 204);
+  margin: 110px auto;
+  border-radius: 50px;
+  padding: 40px;
+  color: #161a2b;
+  width: 90%;
+}
+
+.box-home-inside {
+  background: rgb(209, 204, 204);
+  padding: 5px;
+  margin: 50px auto 50px auto;
+  color: #161a2b;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 605px;
+  display: block;
+  width: 79%;
+
+  -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+}
+
+.box-background {
+  background: rgb(209, 204, 204);
+  margin: 110px auto;
+  border-radius: 50px;
+  padding: 40px;
+  color: #161a2b;
+  width: 75%;
+}
+
+.box-register-page {
+  padding: 0px 10px;
+  margin-top: 15px;
+  margin-bottom: 50px;
+  color: #161a2b;
+  height: 470px;
+  display: block;
+}
+
+.footer {
+  background-color: #161a2b;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  padding: 0;
+  overflow: auto;
+  position: fixed;
+  width: 100%;
+  height: 2rem;
+  bottom: 0;
+  justify-content: center;
+  font-size: 12px;
+}
+.card {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.6rem;
+  outline: 0;
+  top: 200px;
+}
+
+textarea {
+  resize: none;
+}
