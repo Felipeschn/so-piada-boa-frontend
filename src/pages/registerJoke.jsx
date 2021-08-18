@@ -26,43 +26,43 @@ const RegisterJoke = () => {
       {redirect ? <Redirect to="/home" /> : ""}
       <div className="row">
         <div className="offset-col">
-          <div className="box-background">
-            <div className="box-register-page">
-              <h1 style={{ color: "red" }}>Nova piada</h1>
+          <div className="box-page">
+            <div className="box-register">
+              <h1 className="header">Nova piada</h1>
               <br />
               <form className="form-inline" onSubmit={handleSave}>
-                <div className="row" style={{ paddingBottom: "10px" }}>
+                <div className="row padding-bottom">
                   <div className="form-group col-6">
-                    <label style={{ paddingBottom: "5px" }} for="name">
+                    <label className="text-inputs" for="name">
                       Nome:
                     </label>
                     <input
                       type="text"
-                      className="form-control"
+                      className="form-control input-text"
                       id="name"
                       onChange={(e) => setName(e.target.value)}
                       required
                     />
                   </div>
                   <div className="form-group col-6">
-                    <label for="email" style={{ paddingBottom: "5px" }}>
+                    <label for="email" className="text-inputs">
                       Email:
                     </label>
                     <input
                       type="email"
-                      className="form-control"
+                      className="form-control input-text"
                       id="email"
                       onChange={(e) => setEmail(e.target.value)}
                       required
                     />
                   </div>
                 </div>
-                <div className="form-group" style={{ paddingBottom: "10px" }}>
-                  <label style={{ paddingBottom: "5px" }} for="title">
+                <div className="form-group padding-bottom">
+                  <label className="text-inputs" for="title">
                     Título:
                   </label>
                   <input
-                    className="form-control"
+                    className="form-control input-text"
                     id="title"
                     rows="7"
                     onChange={(e) => setTitle(e.target.value)}
@@ -74,11 +74,11 @@ const RegisterJoke = () => {
                   style={{ marginBottom: "15px" }}
                   required
                 >
-                  <label style={{ paddingBottom: "5px" }} for="joke">
+                  <label className="text-inputs" for="joke">
                     Piada:
                   </label>
                   <textarea
-                    className="form-control"
+                    className="form-control input-text"
                     id="joke"
                     rows="7"
                     onChange={(e) => setDescription(e.target.value)}
@@ -86,29 +86,19 @@ const RegisterJoke = () => {
                 </div>
                 <div className="row">
                   <div className="form-group col-6"></div>
-                  <div
-                    className="form-group col-6"
-                    style={{ display: "flex", justifyContent: "flex-end" }}
-                  >
+                  <div className="form-group col-6 align-end">
                     <div className="row">
-                      <div className="col-6">
+                      <div className="col-6 align-end">
                         <Link
-                          className="btn btn-outline-danger btn-lg"
+                          className="btn button-outline"
                           role="button"
                           to="/home"
                         >
                           Cancelar
                         </Link>
                       </div>
-                      <div
-                        className="col-6"
-                        style={{
-                          display: "flex",
-                          justifyContent: "flex-end",
-                          paddingLeft: "0px",
-                        }}
-                      >
-                        <button type="submit" className="btn btn-danger btn-lg">
+                      <div className="col-6 align-end">
+                        <button type="submit" className="btn button-register">
                           Enviar
                         </button>
                       </div>
