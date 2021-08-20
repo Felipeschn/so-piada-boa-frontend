@@ -1,9 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+import dateFormater from "../services/handleDate";
+import { getAutoComplete, getJokes, getJokesOrdered } from "../services/api";
+
 import { Link } from "react-router-dom";
 import JokeModal from "../components/JokeModal";
-import dateFormater from "../services/serviceDate";
 
 const Home = () => {
   const [jokes, setJokes] = useState([]);
@@ -14,16 +15,16 @@ const Home = () => {
 
   async function load() {
     if (orderBy) {
-      const response = await axios.get(`jokes/orderby/${orderBy}`);
+      const response = await getJokesOrdered(orderBy);
       setJokes(response.data);
     } else {
-      const response = await axios.get("jokes");
+      const response = await getJokes();
       setJokes(response.data);
     }
   }
 
   async function loadAutoComplete(char) {
-    const response = await axios.get(`jokes/autocomplete/${char}`);
+    const response = await getAutoComplete(char);
     setJokes(response.data);
   }
 

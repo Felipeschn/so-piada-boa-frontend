@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import axios from "axios";
 import { Link, Redirect } from "react-router-dom";
+
+import { postJoke } from "../services/api";
 
 const RegisterJoke = () => {
   const [name, setName] = useState("");
@@ -11,14 +12,9 @@ const RegisterJoke = () => {
 
   const handleSave = async (e) => {
     e.preventDefault();
-    axios
-      .post("jokes", {
-        name,
-        email,
-        title,
-        description,
-      })
-      .then(() => setRedirect(true));
+    await postJoke(name, email, title, description).then(() =>
+      setRedirect(true)
+    );
   };
 
   return (

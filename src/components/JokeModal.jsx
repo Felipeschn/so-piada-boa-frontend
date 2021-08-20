@@ -1,17 +1,9 @@
 import axios from "axios";
 import { Modal } from "react-bootstrap";
-import dateFormater from "../services/serviceDate";
+import dateFormater from "../services/handleDate";
+import { putVotes } from "../services/api";
 
 const ModalConfirm = ({ open, handleClose, hightlitedJoke }) => {
-  async function handleVote(upVote, id) {
-    console.log("ind");
-    if (upVote) {
-      await axios.put(`/jokes/like/${id}`);
-    } else {
-      await axios.put(`/jokes/dislike/${id}`);
-    }
-    handleClose();
-  }
   return (
     <Modal show={open} onHide={() => handleClose()}>
       <Modal.Header style={{ borderBottom: "0 none", color: "red" }}>
@@ -44,7 +36,9 @@ const ModalConfirm = ({ open, handleClose, hightlitedJoke }) => {
             <button
               type="button"
               className="button-lilke"
-              onClick={() => handleVote(true, hightlitedJoke.id)}
+              onClick={() =>
+                putVotes(true, hightlitedJoke.id).then(() => handleClose())
+              }
             >
               <label className="happy-icon">CHOREI</label>
             </button>
@@ -53,7 +47,9 @@ const ModalConfirm = ({ open, handleClose, hightlitedJoke }) => {
             <button
               type="button"
               className="button-dislilke"
-              onClick={() => handleVote(false, hightlitedJoke.id)}
+              onClick={() =>
+                putVotes(false, hightlitedJoke.id).then(() => handleClose())
+              }
             >
               <label className="sad-icon">NEM RI</label>
             </button>
