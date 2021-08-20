@@ -29,11 +29,6 @@ export async function putVotes(upVote, id) {
 }
 
 //POST
-export async function postJoke(name, email, title, description) {
-  await http.post("jokes", {
-    name,
-    email,
-    title,
-    description,
-  });
+export async function postJoke(dataPOST) {
+  await http.post("jokes", dataPOST);
 }

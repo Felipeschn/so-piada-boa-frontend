@@ -12,7 +12,7 @@ const RegisterJoke = () => {
 
   const handleSave = async (e) => {
     e.preventDefault();
-    await postJoke(name, email, title, description).then(() =>
+    await postJoke({ name, email, title, description }).then(() =>
       setRedirect(true)
     );
   };
