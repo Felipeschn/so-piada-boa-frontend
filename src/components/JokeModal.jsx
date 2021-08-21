@@ -1,4 +1,3 @@
-import axios from "axios";
 import { Modal } from "react-bootstrap";
 import dateFormater from "../services/handleDate";
 import { putVotes } from "../services/api";
